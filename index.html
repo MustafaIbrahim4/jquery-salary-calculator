@@ -7,41 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/style.css" />
 <script src="vendors/jquery-3.4.1.min.js"></script>
+<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 <script src="scripts/client.js"></script>
 
 <body>
     <h1>Salary Calculator</h1>
     <ul>Add employee</ul>
+    <main class="container">
+        <section id=theColor>
+            <input type='text' placeholder="first Name" id='firstNameInput' />
+            <input type='text' placeholder="last Name" id='lastNameInput' />
+            <input type='number' placeholder="Id Number" id='idNumberInput' />
+            <input type='text' placeholder="jobT itle" id='jobInput' />
+            <input type='number' placeholder="annual Salary" id='salaryInput' />
+            <button id='submitButton'>submit</button>
+        </section>
+        <ul id="itemsOut"></ul>
 
-    <section id=theColor>
-        <input type='text' placeholder="first Name" id='firstNameInput' />
-        <input type='text' placeholder="last Name" id='lastNameInput' />
-        <input type='number' placeholder="Id Number" id='idNumberInput' />
-        <input type='text' placeholder="jobT itle" id='jobInput' />
-        <input type='number' placeholder="annual Salary" id='salaryInput' />
-        <button id='submitButton'>submit</button>
-    </section>
-    <ul id="itemsOut"></ul>
-
-    <table id='table1'>
-        <thead>
-            <tr id='subTable'>
-                <th>first Name:</th>
-
-                <th>last Name:</th>
-                <th>id Number:</th>
-                <th>job Title:</th>
-                <th>annual Salary:</th>
-            </tr>
-        </thead>
-        <tbody id='xEmployees'>
-        </tbody>
-        <tfoot>
-            <tr>
-            </tr>
-        </tfoot>
+        <table id='table1'>
+            <thead>
+                <tr id='subTable'>
+                    <th>first Name:</th>
+                    <th>last Name:</th>
+                    <th>id Number:</th>
+                    <th>job Title:</th>
+                    <th>annual Salary:</th>
+                </tr>
+            </thead>
+    </main>
+    <tbody id='xEmployees'>
+    </tbody>
+    <tfoot>
+        <tr>
+        </tr>
+    </tfoot>
     </table>
     <section id=displaySalary>
         total salary is
