@@ -12,7 +12,7 @@ function readyNow() {
 
 function addItem() {
     let fNimput = $('#firstNameInput')
-    let lNimput = $('#lastNameImput')
+    let lNimput = $('#lastNameInput')
     let idNimput = $('#idNumberInput')
     let jobImput = $('#jobInput')
     let salImput = $('#salaryInput')
@@ -39,7 +39,9 @@ function addItem() {
     displayText()
     salaryDisplayer()
     colorCode()
-    $(`#deleteButton`).on('click', logBut)
+    $(`#table1`).on('click', '#deleteButton', remove)
+    /* delete button has to exist here because the button
+    is'nt loaded on page load  */
 
 }
 
@@ -64,6 +66,8 @@ function displayText() {
 
 function salaryDisplayer() {
     $("#salaryDisplay").text(salaryCount);
+    /* appends whatever salaryCount is to the text on
+     dom */
 }
 
 function colorCode() {
@@ -74,9 +78,6 @@ function colorCode() {
     }
 }
 
-function logBut() {
-    var td = event.target.parentNode;
-    var tr = td.parentNode;
-    tr.parentNode.removeChild(tr);
+function remove() {
+    $(this).parent().parent().remove()
 }
-document.getElementById('myTable').deleteRow(0)
